@@ -9,8 +9,8 @@ jobs:
         uses: actions/checkout@v1
       - name: Publish to ECR
         uses: ./
-        id: hello
+        id: publish
         with:
-          who-to-greet: 'Mona the Octocat'
+          image-tag: 'merchant-ui'
       - name: Get the output message
         run: echo "The message was -> ${{ steps.hello.outputs.message }}"
