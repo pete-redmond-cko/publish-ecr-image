@@ -19,7 +19,8 @@ try {
   const imageTag = core.getInput('image-tag');
   
   run(`docker build -t ${imageTag} .`)
-  run(`docker image ls`);
+  run('docker login -u httpete --password-stdin !2ZLf6wmXiRKffXY27t@')
+  run(`docker push ${imageTag}`);
 
 } catch (error) {
   core.setFailed(error.message);
