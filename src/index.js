@@ -17,11 +17,9 @@ function run(cmd, options = {}) {
 
 try {
   const imageTag = core.getInput('image-tag');
-  console.log(`building image with tag -> ${imageTag}`);
-  core.setOutput("message", `building image with tag -> ${imageTag}`);
   
   run(`docker build -t ${imageTag} .`)
-
+  run(`docker image ls`);
 
 } catch (error) {
   core.setFailed(error.message);
