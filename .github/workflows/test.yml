@@ -11,7 +11,7 @@ jobs:
         uses: ./
         id: publish
         with:
-          tag: 'example-docker-image'
+          tag: 'example-docker-lets-play-fifa'
           docker-username: ${{ secrets.DOCKER_USERNAME }}
           docker-password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Get the output message
