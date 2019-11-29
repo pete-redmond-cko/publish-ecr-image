@@ -11,8 +11,6 @@ function run(cmd, options = {}) {
         encoding: 'utf-8',
         env: {
             ...process.env,
-            AWS_ACCESS_KEY_ID,
-            AWS_SECRET_ACCESS_KEY,
         },
     });
 }
