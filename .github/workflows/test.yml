@@ -11,6 +11,8 @@ jobs:
         uses: ./
         id: publish
         with:
-          image-tag: 'merchant-ui'
+          tag: 'example-docker-image'
+          docker-username: ${{ secrets.DOCKER_USERNAME }}
+          docker-password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Get the output message
         run: echo "The message was -> ${{ steps.hello.outputs.message }}"

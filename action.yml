@@ -1,6 +1,10 @@
 name: 'publish-ecr-image'
 description: 'build and publish the image to ECR'
 inputs:
+  docker-username:
+    description: 'Username for docker'
+  docker-password:
+    description: 'Password for docker'  
   image-tag: 
     description: 'Tag for the docker image'
 outputs:

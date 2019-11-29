@@ -16,11 +16,15 @@ function run(cmd, options = {}) {
 }
 
 try {
-  const imageTag = core.getInput('image-tag');
+  const docker = {
+      tag: core.getInput('tag'),
+      username: core.getInput('docker-username'),
+      password: core.getInput('docker-password'),
+  }
   
-  run(`docker build -t httpete/${imageTag} .`)
-  run('docker login -u httpete -p !2ZLf6wmXiRKffXY27t@')
-  run(`docker push httpete/${imageTag}`);
+  run(`docker build -t ${docker.username}/${docker.tag} .`)
+  run(`docker login -u ${docker.username} -p ${docker.password}`)
+  run(`docker push ${docker.username}/${docker.tag}`);
 
 } catch (error) {
   core.setFailed(error.message);
