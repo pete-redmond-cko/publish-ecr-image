@@ -1,0 +1,24 @@
+{
+  "name": "publish-ecr-image",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pete-redmond-cko/publish-ecr-image.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pete-redmond-cko/publish-ecr-image/issues"
+  },
+  "homepage": "https://github.com/pete-redmond-cko/publish-ecr-image#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0"
+  }
+}

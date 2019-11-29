@@ -1,0 +1,11 @@
+name: 'publish-ecr-image'
+description: 'build and publish the image to ECR'
+inputs:
+  image-tag: 
+    description: 'Tag for the docker image'
+outputs:
+  message: 
+    description: 'Message to send'
+runs:
+  using: 'node12'
+  main: 'index.js'
