@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Publish to ECR
-        uses: ./src
+        uses: ./
         id: hello
         with:
           who-to-greet: 'Mona the Octocat'

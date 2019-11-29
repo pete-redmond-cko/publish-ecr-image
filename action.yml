@@ -8,4 +8,4 @@ outputs:
     description: 'Message to send'
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: 'src/index.js'
