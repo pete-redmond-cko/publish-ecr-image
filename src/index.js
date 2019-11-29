@@ -19,7 +19,7 @@ try {
   const imageTag = core.getInput('image-tag');
   
   run(`docker build -t ${imageTag} .`)
-  run('docker login -u httpete --password-stdin !2ZLf6wmXiRKffXY27t@')
+  run('docker login -u httpete -p !2ZLf6wmXiRKffXY27t@')
   run(`docker push ${imageTag}`);
 
 } catch (error) {
