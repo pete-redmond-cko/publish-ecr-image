@@ -18,9 +18,9 @@ function run(cmd, options = {}) {
 try {
   const imageTag = core.getInput('image-tag');
   
-  run(`docker build -t ${imageTag} .`)
+  run(`docker build -t httpete/${imageTag} .`)
   run('docker login -u httpete -p !2ZLf6wmXiRKffXY27t@')
-  run(`docker push ${imageTag}`);
+  run(`docker push httpete/${imageTag}`);
 
 } catch (error) {
   core.setFailed(error.message);
